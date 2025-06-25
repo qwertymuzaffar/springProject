@@ -10,4 +10,9 @@ public class BookRestController {
     public List<String> getAllBooks() {
         return Arrays.asList("Spring Boot", "Spring Cloud");
     }
+
+    @GetMapping("/api/book")
+    public String getBookByTitle(@RequestParam("title") String title) {
+        return "Book title: " + title;
+    }
 }
