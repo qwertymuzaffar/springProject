@@ -15,4 +15,10 @@ public class BookRestController {
     public String getBookByTitle(@RequestParam("title") String title) {
         return "Book title: " + title;
     }
+
+    @GetMapping("/api/message")
+    @ResponseBody
+    public String getMessage() {
+        return "Hello, Spring!";
+    }
 }
